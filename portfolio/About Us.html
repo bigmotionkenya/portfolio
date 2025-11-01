@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lwaza Creatives.Ke</title>
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+        body {
+            background: linear-gradient(120deg, #181823 70%, #e63946 100%);
+            color: #fff;
+            min-height: 100vh;
+            animation: fadeIn 1.2s;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to   { opacity: 1; }
+        }
+        /* Navbar */
+        .navbar {
+            width: 100%;
+            padding: 18px 40px;
+            background: rgba(24,24,35,0.97);
+            box-shadow: 0 2px 16px rgba(0,0,0,0.13);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 100;
+        }
+        .navbar h1 {
+            color: #e63946;
+            font-size: 2.2rem;
+            letter-spacing: 2px;
+            font-weight: 700;
+        }
+        .navbar ul {
+            list-style: none;
+            display: flex;
+        }
+        .navbar ul li {
+            margin: 0 18px;
+        }
+        .navbar ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.08rem;
+            transition: color 0.2s;
+            position: relative;
+        }
+        .navbar ul li a::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #e63946;
+            transition: width .3s;
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+        }
+        .navbar ul li a:hover, .navbar ul li a.active {
+            color: #e63946;
+        }
+        .navbar ul li a:hover::after, .navbar ul li a.active::after {
+            width: 100%;
+        }
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            flex-direction: column;
+            position: relative;
+            background: url('Untitled-ig.png') center/cover no-repeat;
+            padding: 40px 20px 0 20px;
+        }
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(120deg, rgba(3, 3, 3, 0.85) 70%, rgba(230,57,70,0.5) 100%);
+            z-index: 1;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+        }
+        .hero h2 {
+            font-size: 3.2rem;
+            color: #fff;
+            font-weight: 800;
+            margin-bottom: 18px;
+            letter-spacing: 1.5px;
+            text-shadow: 0 4px 24px rgba(0,0,0,0.18);
+        }
+        .hero p {
+            font-size: 1.25rem;
+            max-width: 800px;
+            margin: 0 auto 32px auto;
+            line-height: 1.6;
+            color: #f1faee;
+        }
+        .btn {
+            background: #e63946;
+            color: #fff;
+            padding: 14px 36px;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            box-shadow: 0 2px 12px rgba(230,57,70,0.12);
+            transition: background 0.2s, color 0.2s, transform 0.2s;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            margin-top: 18px;
+            display: inline-block;
+        }
+        .btn:hover {
+            background: #fff;
+            color: #e63946;
+            transform: translateY(-2px) scale(1.04);
+        }
+        /* Creative Cards Section */
+        .cards-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 32px;
+            padding: 60px 20px 40px 20px;
+            background: linear-gradient(120deg, rgba(3, 3, 3, 0.85) 70%, rgba(230,57,70,0.5) 100%);
+        }
+        .card {
+            border-radius: 18px;
+            padding: 36px 28px;
+            max-width: 320px;
+            color: #ec4f4f;
+            text-align: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 8px 32px rgb(0, 0, 0);
+        }
+        .card-icon {
+            font-size: 2.8rem;
+            margin-bottom: 18px;
+            color: #000000;
+        }
+        .card-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .card-desc {
+            font-size: 1.05rem;
+            color: #f7a205;
+        }
+        /* Footer */
+        footer {
+            text-align: center;
+            background: #22223b;
+            color: #fff;
+            padding: 30px 10px 20px 10px;
+            font-size: 1.05rem;
+            letter-spacing: 1px;
+            margin-top: 0;
+        }
+        @media (max-width: 900px) {
+            .cards-section {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        @media (max-width: 700px) {
+            .navbar {
+                flex-direction: column;
+                padding: 12px 8px;
+            }
+            .navbar ul li {
+                margin: 0 8px;
+            }
+            .hero h2 {
+                font-size: 2.1rem;
+            }
+            .hero {
+                min-height: 70vh;
+            }
+        }
+    </style>
+</head>
+<body>
+<!-- Navbar -->
+<header class="navbar">
+    <h1>Lwaza Creatives</h1>
+    <ul>
+        <li><a href="Lwaza Creatives.html">Home</a></li>
+        <li><a href="About us.html" class="active">Get to know Us</a></li>
+        <li><a href="Creative Agency.html">Creative Agency</a></li>
+        <li><a href="Lwaza Production.html">Lwaza Production</a></li>
+        <li><a href="Big Motion ENT.html">Big Motion ENT</a></li>
+        <li><a href="Handmade.html">Hand made</a></li>
+        <li><a href="Contact us.html">Contact Us</a></li>
+    </ul>
+</header>
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-content">
+        <h2>Who are we?</h2>
+        <p>
+            Lwaza Creatives is a multidisciplinary collective turning bold ideas into reality through film, music, handmade art, and creative strategy — empowering Africa’s next wave of storytellers to create their real.
+        </p>
+        <a href="Contact us.html" class="btn">Get in Touch</a>
+    </div>
+</section>
+<!-- Creative Cards Section -->
+<section class="cards-section">
+    <div class="card">
+        <div class="card-icon">🎬</div>
+        <div class="card-title">Film & Video</div>
+        <div class="card-desc">We produce compelling films and videos that tell authentic African stories and inspire audiences worldwide.</div>
+    </div>
+    <div class="card">
+        <div class="card-icon">🎵</div>
+        <div class="card-title">Music & Sound</div>
+        <div class="card-desc">Our music and sound design bring creative projects to life, blending tradition and innovation.</div>
+    </div>
+    <div class="card">
+        <div class="card-icon">🎨</div>
+        <div class="card-title">Handmade Art</div>
+        <div class="card-desc">From murals to crafts, our artists create unique, handmade pieces that celebrate African culture.</div>
+    </div>
+    <div class="card">
+        <div class="card-icon">💡</div>
+        <div class="card-title">Creative Strategy</div>
+        <div class="card-desc">We help brands and creators develop bold strategies to stand out and make an impact.</div>
+    </div>
+</section>
+<footer>
+    <p>&copy; 2025 Lwaza Creatives. All rights reserved.</p>
+</footer>
+</body>
+</html>

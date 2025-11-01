@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Big Motion ENT | Lwaza Creatives.Ke</title>
+    <style>
+        :root {
+            --netflix-red: #e50914;
+            --netflix-dark: #141414;
+            --netflix-grey: #222;
+            --netflix-light: #fff;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+        body {
+            background: var(--netflix-dark);
+            color: var(--netflix-light);
+            min-height: 100vh;
+        }
+        .navbar {
+            width: 100%;
+            padding: 18px 40px;
+            background: rgba(20,20,20,0.98);
+            box-shadow: 0 2px 16px rgba(0,0,0,0.13);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 10;
+        }
+        .navbar h1 {
+            color: var(--netflix-red);
+            font-size: 2.2rem;
+            letter-spacing: 2px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        .navbar ul {
+            list-style: none;
+            display: flex;
+        }
+        .navbar ul li {
+            margin: 0 18px;
+        }
+        .navbar ul li a {
+            color: var(--netflix-light);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.08rem;
+            transition: color 0.2s;
+            position: relative;
+            letter-spacing: 1px;
+        }
+        .navbar ul li a::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: var(--netflix-red);
+            transition: width .3s;
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+        }
+        .navbar ul li a:hover, .navbar ul li a.active {
+            color: var(--netflix-red);
+        }
+        .navbar ul li a:hover::after, .navbar ul li a.active::after {
+            width: 100%;
+        }
+        .hero {
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            flex-direction: column;
+            position: relative;
+            padding-top: 120px;
+            background: url('Film.jpg') no-repeat center center/cover;
+        }
+        .hero h2 {
+            font-size: 4rem;
+            font-weight: 900;
+            margin-bottom: 18px;
+            letter-spacing: 1.5px;
+            color: var(--netflix-light);
+            text-shadow: 2px 2px 10px #000;
+            text-transform: uppercase;
+        }
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 28px;
+            line-height: 1.5;
+            color: #f1faee;
+            text-shadow: 1px 1px 6px #000;
+        }
+        .btn {
+            background: var(--netflix-red);
+            color: var(--netflix-light);
+            padding: 14px 36px;
+            text-decoration: none;
+            font-weight: 700;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            box-shadow: 0 2px 12px rgba(229,9,20,0.12);
+            transition: background 0.2s, color 0.2s, transform 0.2s;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .btn:hover {
+            background: #fff;
+            color: var(--netflix-red);
+            transform: translateY(-2px) scale(1.04);
+        }
+        .services {
+            padding: 60px 20px 40px 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .services h2 {
+            text-align: center;
+            color: var(--netflix-red);
+            font-size: 2.2rem;
+            margin-bottom: 28px;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            font-weight: 900;
+        }
+        .service-box {
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            flex-wrap: wrap;
+            gap: 18px;
+            margin-bottom: 20px;
+        }
+        .service {
+            border-radius: 14px;
+            padding: 24px 18px;
+            max-width: 270px;
+            min-width: 180px;
+            color: #fff;
+            text-align: center;
+            transition: transform 0.18s, box-shadow 0.18s;
+            border: 2px solid transparent;
+            position: relative;
+            background: rgba(34,34,34,0.92);
+            box-shadow: 0 4px 14px rgba(229,9,20,0.12);
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .service:hover {
+            transform: translateY(-8px) scale(1.05);
+            box-shadow: 0 8px 28px rgba(229,9,20,0.19);
+            border: 2px solid var(--netflix-red);
+        }
+        .service h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .service p {
+            font-size: 1rem;
+            color: #f1faee;
+        }
+        footer {
+            text-align: center;
+            background: #181818;
+            color: #fff;
+            padding: 30px 10px 20px 10px;
+            font-size: 1.05rem;
+            letter-spacing: 1px;
+            margin-top: 0;
+        }
+        @media (max-width: 900px) {
+            .service-box {
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 12px;
+            }
+            .service {
+                max-width: 45vw;
+                min-width: 120px;
+            }
+        }
+        @media (max-width: 700px) {
+            .service-box {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+            .service {
+                max-width: 95vw;
+                min-width: 80px;
+            }
+            .hero h2 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <h1>Lwaza Creatives</h1>
+        <ul>
+            <li><a href="Lwaza Creatives.html">Home</a></li>
+            <li><a href="Creative Agency.html">Creative Agency</a></li>
+            <li><a href="Lwaza Production.html">Lwaza Production</a></li>
+            <li><a href="Big Motion ENT.html" class="active">Big Motion ENT</a></li>
+            <li><a href="Handmade.html">Hand made</a></li>
+            <li><a href="Contact us.html">Contact Us</a></li>
+        </ul>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h2>Welcome to Big Motion ENT</h2>
+        <p>We specialize in top-tier entertainment, events, and music production.</p>
+        <a href="Contact us.html" class="btn">Get in Touch</a>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <h2>Our Services</h2>
+        <div class="service-box">
+            <div class="service">
+                <h3>Event Management</h3>
+                <p>We organize world-class concerts, parties, and entertainment events.</p>
+            </div>
+            <div class="service">
+                <h3>Music Production</h3>
+                <p>High-quality recording, mixing, and mastering for artists.</p>
+            </div>
+            <div class="service">
+                <h3>Artist Management</h3>
+                <p>Helping talents grow with professional branding and exposure.</p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2025 Big Motion ENT. All rights reserved.</p>
+    </footer>
+</body>
+</html>

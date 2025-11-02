@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .gallery-item {
+            position: relative;
+            margin: 10px;
+            width: calc(33.333% - 20px);
+            box-sizing: border-box;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+        }
+        .lightbox:target {
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <h1>Portfolio Gallery</h1>
+    <div class="gallery">
+        <div class="gallery-item">
+            <a href="#lightbox1"><img src="portfolio/BLUR%20BG.png" alt="BLUR BG"></a>
+        </div>
+        <div class="gallery-item">
+            <a href="#lightbox2"><img src="portfolio/Garissa%20Enterprices%20mockup1.png" alt="Garissa Enterprices mockup1"></a>
+        </div>
+        <div class="gallery-item">
+            <a href="#lightbox3"><img src="portfolio/Garissa%20Enterprices.png" alt="Garissa Enterprices"></a>
+        </div>
+        <div class="gallery-item">
+            <a href="#lightbox4"><img src="portfolio/SNE%20sports%20banner%202.png" alt="SNE sports banner 2"></a>
+        </div>
+        <div class="gallery-item">
+            <a href="#lightbox5"><img src="portfolio/SNE%20sports%20banner.png" alt="SNE sports banner"></a>
+        </div>
+        <div class="gallery-item">
+            <a href="#lightbox6"><img src="portfolio/bg%20less%20logo.png" alt="bg less logo"></a>
+        </div>
+        <div class="gallery-item">
+            <a href="#lightbox7"><img src="portfolio/book%20cover.png" alt="book cover"></a>
+        </div>
+        <div class="gallery-item">
+            <a href="#lightbox8"><img src="portfolio/FEASSA%20-%20Copy.png" alt="FEASSA - Copy"></a>
+        </div>
+        <div class="gallery-item">
+            <a href="#lightbox9"><img src="portfolio/Film_Tribe_Africa_Press_Release.png" alt="Film Tribe Africa Press Release"></a>
+        </div>
+        <div class="gallery-item">
+            <a href="#lightbox10"><img src="portfolio/Background.jpg" alt="Background"></a>
+        </div>
+    </div>
+
+    <div id="lightbox1" class="lightbox"><img src="portfolio/BLUR%20BG.png" onclick="window.location='#'" alt="BLUR BG"></div>
+    <div id="lightbox2" class="lightbox"><img src="portfolio/Garissa%20Enterprices%20mockup1.png" onclick="window.location='#'" alt="Garissa Enterprices mockup1"></div>
+    <div id="lightbox3" class="lightbox"><img src="portfolio/Garissa%20Enterprices.png" onclick="window.location='#'" alt="Garissa Enterprices"></div>
+    <div id="lightbox4" class="lightbox"><img src="portfolio/SNE%20sports%20banner%202.png" onclick="window.location='#'" alt="SNE sports banner 2"></div>
+    <div id="lightbox5" class="lightbox"><img src="portfolio/SNE%20sports%20banner.png" onclick="window.location='#'" alt="SNE sports banner"></div>
+    <div id="lightbox6" class="lightbox"><img src="portfolio/bg%20less%20logo.png" onclick="window.location='#'" alt="bg less logo"></div>
+    <div id="lightbox7" class="lightbox"><img src="portfolio/book%20cover.png" onclick="window.location='#'" alt="book cover"></div>
+    <div id="lightbox8" class="lightbox"><img src="portfolio/FEASSA%20-%20Copy.png" onclick="window.location='#'" alt="FEASSA - Copy"></div>
+    <div id="lightbox9" class="lightbox"><img src="portfolio/Film_Tribe_Africa_Press_Release.png" onclick="window.location='#'" alt="Film Tribe Africa Press Release"></div>
+    <div id="lightbox10" class="lightbox"><img src="portfolio/Background.jpg" onclick="window.location='#'" alt="Background"></div>
+
+</body>
+</html>

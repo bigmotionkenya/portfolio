@@ -1,5 +1,13 @@
 /* fonts family */
 
+header#top {
+  z-index: 1000 !important;
+}
+
+.navbar.fixed-top {
+  z-index: 1000 !important;
+}
+
 :root {
     --body-font : "Work Sans", sans-serif;
     --bs-btn-font-family : "Work Sans", sans-serif;
@@ -459,15 +467,6 @@ html {
   object-fit: cover;
   object-position: center;
   display: block;
-}
-
-/* Ensure navbar stays above everything */
-header#top {
-  z-index: 1000 !important;
-}
-
-.navbar.fixed-top {
-  z-index: 1000 !important;
 }
 
 /* Hero Content Section - BELOW VIDEO */
